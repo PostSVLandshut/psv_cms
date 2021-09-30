@@ -26,7 +26,7 @@ public class Article {
     @Column(nullable = false, unique = true)
     private String title;
     @Column(nullable = false)
-    private long author;
+    private User author;
 
     /**
      * Posted on website or not
@@ -53,7 +53,7 @@ public class Article {
     private long klicks = 0l;
 
     public Article(String title, 
-                    long author, 
+                    User author, 
                     boolean isPublished, 
                     String content, 
                     Department department, 
@@ -78,11 +78,11 @@ public class Article {
         this.title = title;
     }
 
-    public void setAuthor(long author) {
+    public void setAuthor(User author) {
         this.author = author;
     }
 
-    public long getAuthor() {
+    public User getAuthor() {
         return author;
     }
 
